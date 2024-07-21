@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1046192C4B895700C8F56A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1046182C4B895700C8F56A /* RegisterViewController.swift */; };
+		1F10461B2C4B898800C8F56A /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10461A2C4B898800C8F56A /* RecoveryViewController.swift */; };
+		1F10461D2C4B8B1200C8F56A /* PersonalAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10461C2C4B8B1200C8F56A /* PersonalAreaViewController.swift */; };
+		1F1046202C4BC08700C8F56A /* RegisterMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10461F2C4BC08700C8F56A /* RegisterMailViewController.swift */; };
+		1F1046222C4BC0A300C8F56A /* RegisterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1046212C4BC0A300C8F56A /* RegisterInfoViewController.swift */; };
+		1F1046242C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1046232C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift */; };
+		1F75EA672C4CEB3900F9202B /* logoBlack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F75EA662C4CEB3900F9202B /* logoBlack.jpg */; };
 		1FED8E122C4A54690091AE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E112C4A54690091AE88 /* AppDelegate.swift */; };
 		1FED8E142C4A54690091AE88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E132C4A54690091AE88 /* SceneDelegate.swift */; };
-		1FED8E162C4A54690091AE88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E152C4A54690091AE88 /* ViewController.swift */; };
-		1FED8E192C4A54690091AE88 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8E182C4A54690091AE88 /* Base */; };
+		1FED8E162C4A54690091AE88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E152C4A54690091AE88 /* LoginViewController.swift */; };
 		1FED8E1B2C4A546A0091AE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8E1A2C4A546A0091AE88 /* Assets.xcassets */; };
 		1FED8E1E2C4A546A0091AE88 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8E1D2C4A546A0091AE88 /* Base */; };
+		1FED8E272C4A59E60091AE88 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E262C4A59E60091AE88 /* ValidatableTextField.swift */; };
+		1FED8E292C4A5B960091AE88 /* InsetedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E282C4A5B960091AE88 /* InsetedTextField.swift */; };
+		1FED8E2C2C4A5C970091AE88 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E2B2C4A5C970091AE88 /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1046182C4B895700C8F56A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1F10461A2C4B898800C8F56A /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
+		1F10461C2C4B8B1200C8F56A /* PersonalAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAreaViewController.swift; sourceTree = "<group>"; };
+		1F10461F2C4BC08700C8F56A /* RegisterMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailViewController.swift; sourceTree = "<group>"; };
+		1F1046212C4BC0A300C8F56A /* RegisterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewController.swift; sourceTree = "<group>"; };
+		1F1046232C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeViewController.swift; sourceTree = "<group>"; };
+		1F75EA662C4CEB3900F9202B /* logoBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoBlack.jpg; sourceTree = "<group>"; };
 		1FED8E0E2C4A54690091AE88 /* termeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = termeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FED8E112C4A54690091AE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FED8E132C4A54690091AE88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FED8E152C4A54690091AE88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1FED8E182C4A54690091AE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FED8E152C4A54690091AE88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FED8E1A2C4A546A0091AE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FED8E1D2C4A546A0091AE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FED8E1F2C4A546A0091AE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FED8E262C4A59E60091AE88 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
+		1FED8E282C4A5B960091AE88 /* InsetedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetedTextField.swift; sourceTree = "<group>"; };
+		1FED8E2B2C4A5C970091AE88 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F10461E2C4BC02100C8F56A /* RegisterGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1F1046182C4B895700C8F56A /* RegisterViewController.swift */,
+				1F10461F2C4BC08700C8F56A /* RegisterMailViewController.swift */,
+				1F1046212C4BC0A300C8F56A /* RegisterInfoViewController.swift */,
+				1F1046232C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift */,
+			);
+			path = RegisterGroup;
+			sourceTree = "<group>";
+		};
 		1FED8E052C4A54680091AE88 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +85,37 @@
 		1FED8E102C4A54690091AE88 /* termeet */ = {
 			isa = PBXGroup;
 			children = (
+				1F75EA662C4CEB3900F9202B /* logoBlack.jpg */,
 				1FED8E112C4A54690091AE88 /* AppDelegate.swift */,
 				1FED8E132C4A54690091AE88 /* SceneDelegate.swift */,
-				1FED8E152C4A54690091AE88 /* ViewController.swift */,
-				1FED8E172C4A54690091AE88 /* Main.storyboard */,
+				1FED8E152C4A54690091AE88 /* LoginViewController.swift */,
+				1F10461E2C4BC02100C8F56A /* RegisterGroup */,
+				1F10461A2C4B898800C8F56A /* RecoveryViewController.swift */,
+				1F10461C2C4B8B1200C8F56A /* PersonalAreaViewController.swift */,
+				1FED8E2A2C4A5C0C0091AE88 /* DesignFiles */,
+				1FED8E252C4A59400091AE88 /* UIElements */,
 				1FED8E1A2C4A546A0091AE88 /* Assets.xcassets */,
 				1FED8E1C2C4A546A0091AE88 /* LaunchScreen.storyboard */,
 				1FED8E1F2C4A546A0091AE88 /* Info.plist */,
 			);
 			path = termeet;
+			sourceTree = "<group>";
+		};
+		1FED8E252C4A59400091AE88 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8E262C4A59E60091AE88 /* ValidatableTextField.swift */,
+				1FED8E282C4A5B960091AE88 /* InsetedTextField.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		1FED8E2A2C4A5C0C0091AE88 /* DesignFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8E2B2C4A5C970091AE88 /* AppColors.swift */,
+			);
+			path = DesignFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +178,7 @@
 			files = (
 				1FED8E1B2C4A546A0091AE88 /* Assets.xcassets in Resources */,
 				1FED8E1E2C4A546A0091AE88 /* Base in Resources */,
-				1FED8E192C4A54690091AE88 /* Base in Resources */,
+				1F75EA672C4CEB3900F9202B /* logoBlack.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +189,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FED8E162C4A54690091AE88 /* ViewController.swift in Sources */,
+				1FED8E292C4A5B960091AE88 /* InsetedTextField.swift in Sources */,
+				1FED8E162C4A54690091AE88 /* LoginViewController.swift in Sources */,
+				1F1046242C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift in Sources */,
+				1F1046192C4B895700C8F56A /* RegisterViewController.swift in Sources */,
+				1F1046222C4BC0A300C8F56A /* RegisterInfoViewController.swift in Sources */,
 				1FED8E122C4A54690091AE88 /* AppDelegate.swift in Sources */,
+				1FED8E2C2C4A5C970091AE88 /* AppColors.swift in Sources */,
+				1F10461B2C4B898800C8F56A /* RecoveryViewController.swift in Sources */,
 				1FED8E142C4A54690091AE88 /* SceneDelegate.swift in Sources */,
+				1F10461D2C4B8B1200C8F56A /* PersonalAreaViewController.swift in Sources */,
+				1F1046202C4BC08700C8F56A /* RegisterMailViewController.swift in Sources */,
+				1FED8E272C4A59E60091AE88 /* ValidatableTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1FED8E172C4A54690091AE88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FED8E182C4A54690091AE88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1FED8E1C2C4A546A0091AE88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +346,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = termeet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,9 +373,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = termeet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
