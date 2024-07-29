@@ -14,7 +14,7 @@ enum ValidatableTextFieldStyle {
 }
 
 class ValidatableTextField: UIStackView {
-//CGColor(red: 245, green: 245, blue: 245, alpha: 1)
+
     private let validTextFieldColor: CGColor = AppColors.black300.cgColor
     private let invalidTextFieldColor: CGColor = AppColors.red300.cgColor
     

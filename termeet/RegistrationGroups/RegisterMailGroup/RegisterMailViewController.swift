@@ -2,19 +2,23 @@
 //  RegisterMailViewController.swift
 //  termeet
 //
-//  Created by Polina Popova on 20/07/2024.
+//  Created by Polina Popova on 23/07/2024.
+//  Copyright (c) 2024 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-///!!! Сделать кнопку рабочей только по истечении времени
 import UIKit
 
-class RegisterMailViewController: UIViewController {
+final class RegisterMailViewController: UIViewController, RegisterMailDisplayLogic {
+    
     private let leadingInset: CGFloat = 16
+    
+    private let interactor: RegisterMailBusinessLogic
+    private let router: RegisterMailRoutingLogic
     
     var startTime: Date?
     var timer: Timer?
     var endTime: Date?
-    
+
     //MARK: - TIMER
     let timeLabel: UILabel = {
         let label = UILabel()
@@ -23,7 +27,7 @@ class RegisterMailViewController: UIViewController {
         label.textColor = AppColors.black500
         return label
     }()
-    
+
     @objc func updateTime() {
         guard let endTime = endTime else { return }
         let remainingTime = round(endTime.timeIntervalSinceNow)
@@ -40,14 +44,13 @@ class RegisterMailViewController: UIViewController {
             timeLabel.font = .systemFont(ofSize: 14, weight: .regular)
         }
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
         timer?.invalidate()
         timer = nil
     }
-    
     //MARK: - ELEMENTS
     private lazy var interimButton: UIButton = {
         let button = UIButton()
@@ -61,7 +64,7 @@ class RegisterMailViewController: UIViewController {
         
         return button
     }()
-    
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 30, weight: .heavy)
@@ -69,7 +72,7 @@ class RegisterMailViewController: UIViewController {
         label.text = "Регистрация"
         return label
     }()
-    
+
     private lazy var textLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17, weight: .regular)
@@ -78,7 +81,7 @@ class RegisterMailViewController: UIViewController {
         label.numberOfLines = 10
         return label
     }()
-    
+
     private lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Отправить новое письмо", for: .normal)
@@ -91,36 +94,36 @@ class RegisterMailViewController: UIViewController {
         
         return button
     }()
-    
     //MARK: - Button Action
     @objc func sendEmail() {
         loginButton.backgroundColor = AppColors.termeetStroke
     }
-    
+
     @objc func moveToInfo() {
-        let infoVC = RegisterInfoViewController()
+        let infoVC = RegisterInfoAssembly.build()
         infoVC.modalPresentationStyle = .fullScreen
         self.present(infoVC, animated: true)
     }
     //MARK: - SETUP
     override func viewDidLoad() {
         super.viewDidLoad()
+        initForm()
         view.backgroundColor = .white
         setupLayout()
         setupTimer()
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
+
     private func setupLayout() {
         setupLabel()
         setupText()
         setupButton()
         setupInterimElem()
     }
-    
+
     private func setupLabel() {
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -129,7 +132,7 @@ class RegisterMailViewController: UIViewController {
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingInset).isActive = true
     }
-    
+
     private func setupText() {
         view.addSubview(textLabel)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -138,7 +141,7 @@ class RegisterMailViewController: UIViewController {
         textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingInset).isActive = true
     }
-    
+
     private func setupButton() {
         view.addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
@@ -159,12 +162,29 @@ class RegisterMailViewController: UIViewController {
         endTime = Date().addingTimeInterval(180)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
-    
+
     private func setupInterimElem() {
         view.addSubview(interimButton)
         interimButton.translatesAutoresizingMaskIntoConstraints = false
         interimButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         interimButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    //MARK: - INIT
+    init(interactor: RegisterMailBusinessLogic, router: RegisterMailRoutingLogic) {
+        self.interactor = interactor
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
+    }
 
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    // MARK: - RegisterMailDisplayLogic
+    func displayInitForm(_ viewModel: RegisterMail.InitForm.ViewModel) {}
+    
+    // MARK: - Private
+    private func initForm() {
+        interactor.requestInitForm(RegisterMail.InitForm.Request())
+    }
 }

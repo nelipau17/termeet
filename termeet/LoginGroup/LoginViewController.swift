@@ -1,14 +1,19 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  termeet
 //
-//  Created by Polina Popova on 19/07/2024.
+//  Created by Polina Popova on 23/07/2024.
+//  Copyright (c) 2024 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, LoginDisplayLogic {
+    
     private let leadingInset: CGFloat = 16
+    
+    private let interactor: LoginBusinessLogic
+    private let router: LoginRoutingLogic
 
     //MARK: - ENUMs
     enum EmailTFStrings: String {
@@ -22,29 +27,58 @@ class LoginViewController: UIViewController {
             case labelName = "Пароль"
             case invalidText = "Неверный пароль"
     }
-
     //MARK: - ELEMENTS
+    
+    let passwordTextField: UITextField = { //passwordStackView
+        let textField = UITextField()
+        textField.placeholder = "Enter password"
+        textField.isSecureTextEntry = true
+        textField.borderStyle = .roundedRect
+        textField.layer.cornerRadius = 5
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.gray.cgColor
+        return textField
+    }()
+
+    private lazy var showPasswordButton: UIButton = { //passwordStackView
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        button.tintColor = AppColors.termeetGrey
+        
+        button.addTarget(self, action: #selector(showPasswordButtonTapped), for: .touchUpInside)
+        
+        return button
+    }()
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 30, weight: .heavy)
+        label.font = .H1Bold
         label.textAlignment = .left
         label.text = "Вход"
         return label
     }()
-    
+
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 32
         stackView.axis = .vertical
         return stackView
     }()
-    
+
     private lazy var bottomStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 20
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
+        return stackView
+    }()
+
+    private lazy var passwordStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.spacing = 12
+        stackView.axis = .horizontal
+        
         return stackView
     }()
     
@@ -54,15 +88,9 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: ValidatableTextField = { //mainStackView
-        let textField = ValidatableTextField()
-        textField.setup(title: PasswordTFStrings.labelName.rawValue, placeholder: PasswordTFStrings.placeholder.rawValue, invalidTitle: PasswordTFStrings.invalidText.rawValue, style: .dark)
-        return textField
-    }()
-    
-    private lazy var forgetLabel: UILabel = { //mainStackView
+    private lazy var forgetLabel: UILabel = { // UNDER  -  mainStackView
         let label = UILabel()
-        label.font = .systemFont(ofSize: 17, weight: .regular)
+        label.font = .mainRegular
         label.text = "Забыли пароль?"
         label.textColor = AppColors.termeetBTN
         label.textAlignment = .right
@@ -73,12 +101,12 @@ class LoginViewController: UIViewController {
         
         return label
     }()
-    
+
     private lazy var loginButton: UIButton = { //bottomStackView
         let button = UIButton()
         button.setTitle("Войти", for: .normal)
         button.backgroundColor = AppColors.termeetStroke
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .mainRegular
         button.layer.cornerRadius = 15
         button.setTitleColor(AppColors.white, for: .normal)
         
@@ -86,11 +114,11 @@ class LoginViewController: UIViewController {
         
         return button
     }()
-    
+
     private lazy var registerLabel: UILabel = { //bottomStackView
         let label = UILabel()
-        label.font = .systemFont(ofSize: 17, weight: .regular)
-        label.text = "Ещё нет аккаунта?"
+        label.font = .mainRegular
+        label.text = "Еще нет аккаунта?"
         label.textColor = AppColors.termeetBTN
         label.textAlignment = .center
         
@@ -104,62 +132,60 @@ class LoginViewController: UIViewController {
     
     @objc func moveToMainScene() {
         guard let email = emailTextField.text else { return }
-        emailTextField.isValid = emailIsValid(email: email)
+        emailTextField.isValid = router.emailIsValid(email: email)
         
-        guard emailIsValid(email: email) else {return}
+        guard router.emailIsValid(email: email) else {return}
         
-        let personalAreaVC = PersonalAreaViewController()
-        personalAreaVC.modalPresentationStyle = .fullScreen
-        self.present(personalAreaVC, animated: true)
+        //let personalAreaVC = PersonalAreaAssembly.build()
+        //personalAreaVC.modalPresentationStyle = .fullScreen
+        //self.present(personalAreaVC, animated: true)
         }
     
     @objc func moveToRecovery() {
-        let recoveryVC = RecoveryViewController()
-        recoveryVC.modalPresentationStyle = .fullScreen
-        self.present(recoveryVC, animated: true)
+        //let recoveryVC = RecoveryAssembly.build()
+        //recoveryVC.modalPresentationStyle = .fullScreen
+        //self.present(recoveryVC, animated: true)
     }
     
     @objc func moveToRegister() {
-        let registerVC = RegisterViewController()
+        let registerVC = RegisterAssembly.build()
         registerVC.modalPresentationStyle = .fullScreen
         self.present(registerVC, animated: true)
     }
-    //MARK: - FUNC's
-    private func emailIsValid(email: String) -> Bool {
-        let pattern = "[A-Z0-9a-z._]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        guard email.range(of: pattern, options: .regularExpression) != nil else {
-            return false
-        }
-        return true
+    //MARK: - INIT
+    init(interactor: LoginBusinessLogic, router: LoginRoutingLogic) {
+        self.interactor = interactor
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
     }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    // MARK: - LoginDisplayLogic
+
+    func displayInitForm(_ viewModel: Login.InitForm.ViewModel) {}
     
-    func passwordIsValid(password: String) -> Bool {
-        let pattern = "^(?=.+[A-Z])(?=.+[0-9])(?=.+[.,?!():;]).{8,}$"
-        
-        guard password.range(of: pattern, options: .regularExpression) != nil else {
-            return false
-        }
-        return true
-    }
     //MARK: - SETUP
     override func viewDidLoad() {
         super.viewDidLoad()
+        initForm()
         view.backgroundColor = .white
         setupLayout()
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
+
     private func setupLayout() {
         setupLabel()
         setupMainStackView()
+        setupForgetLabel()
         setupBottomStackView()
-        //setupButton()
     }
-    
+
     private func setupLabel() {
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -168,13 +194,13 @@ class LoginViewController: UIViewController {
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingInset).isActive = true
     }
-    
+
     private func setupMainStackView() {
         view.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.addArrangedSubview(emailTextField)
-        mainStackView.addArrangedSubview(passwordTextField)
-        mainStackView.addArrangedSubview(forgetLabel)
+        setupPasswordStackView()
+        mainStackView.addArrangedSubview(passwordStackView)
         
         mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         mainStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 41).isActive = true
@@ -182,6 +208,14 @@ class LoginViewController: UIViewController {
         mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingInset).isActive = true
     }
     
+    private func setupForgetLabel() {
+        view.addSubview(forgetLabel)
+        forgetLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        forgetLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -leadingInset).isActive = true
+        forgetLabel.topAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 12).isActive = true
+    }
+
     private func setupBottomStackView() {
         view.addSubview(bottomStackView)
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -192,6 +226,11 @@ class LoginViewController: UIViewController {
         bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -43).isActive = true
     }
     
+    private func setupPasswordStackView() {
+        passwordStackView.addArrangedSubview(passwordTextField)
+        passwordStackView.addArrangedSubview(showPasswordButton)
+    }
+
     private func setupButton() {
         view.addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
@@ -200,5 +239,19 @@ class LoginViewController: UIViewController {
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 54).isActive = true
     }
-}
 
+    // MARK: - Private 
+    private func initForm() {
+        interactor.requestInitForm(Login.InitForm.Request())
+    }
+    
+    @objc func showPasswordButtonTapped() {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+
+        if passwordTextField.isSecureTextEntry {
+            showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        } else {
+            showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
+        }
+    }
+}
