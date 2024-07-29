@@ -58,17 +58,50 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F1046182C4B895700C8F56A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		1F10461A2C4B898800C8F56A /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
-		1F10461C2C4B8B1200C8F56A /* PersonalAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAreaViewController.swift; sourceTree = "<group>"; };
-		1F10461F2C4BC08700C8F56A /* RegisterMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailViewController.swift; sourceTree = "<group>"; };
-		1F1046212C4BC0A300C8F56A /* RegisterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewController.swift; sourceTree = "<group>"; };
-		1F1046232C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeViewController.swift; sourceTree = "<group>"; };
-		1F75EA662C4CEB3900F9202B /* logoBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoBlack.jpg; sourceTree = "<group>"; };
+		1F269E742C5010D900F96A6E /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		1F269E752C5010D900F96A6E /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		1F269E762C5010D900F96A6E /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		1F269E772C5010D900F96A6E /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
+		1F269E782C5010D900F96A6E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1F269E792C5010D900F96A6E /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
+		1F269E7A2C5010D900F96A6E /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		1F269E7B2C5010D900F96A6E /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		1F269E852C50111100F96A6E /* RegisterMailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailPresenter.swift; sourceTree = "<group>"; };
+		1F269E862C50111100F96A6E /* RegisterMailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailWorker.swift; sourceTree = "<group>"; };
+		1F269E872C50111100F96A6E /* RegisterMailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailRouter.swift; sourceTree = "<group>"; };
+		1F269E882C50111100F96A6E /* RegisterMailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailModels.swift; sourceTree = "<group>"; };
+		1F269E892C50111100F96A6E /* RegisterMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailViewController.swift; sourceTree = "<group>"; };
+		1F269E8A2C50111100F96A6E /* RegisterMailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailProtocols.swift; sourceTree = "<group>"; };
+		1F269E8B2C50111100F96A6E /* RegisterMailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailAssembly.swift; sourceTree = "<group>"; };
+		1F269E8C2C50111100F96A6E /* RegisterMailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMailInteractor.swift; sourceTree = "<group>"; };
+		1F269E962C50114A00F96A6E /* RegisterInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoPresenter.swift; sourceTree = "<group>"; };
+		1F269E972C50114A00F96A6E /* RegisterInfoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoWorker.swift; sourceTree = "<group>"; };
+		1F269E982C50114A00F96A6E /* RegisterInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoRouter.swift; sourceTree = "<group>"; };
+		1F269E992C50114A00F96A6E /* RegisterInfoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoModels.swift; sourceTree = "<group>"; };
+		1F269E9A2C50114A00F96A6E /* RegisterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewController.swift; sourceTree = "<group>"; };
+		1F269E9B2C50114A00F96A6E /* RegisterInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoProtocols.swift; sourceTree = "<group>"; };
+		1F269E9C2C50114A00F96A6E /* RegisterInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoAssembly.swift; sourceTree = "<group>"; };
+		1F269E9D2C50114A00F96A6E /* RegisterInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoInteractor.swift; sourceTree = "<group>"; };
+		1F269EA72C50117D00F96A6E /* RegisterWelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomePresenter.swift; sourceTree = "<group>"; };
+		1F269EA82C50117D00F96A6E /* RegisterWelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeWorker.swift; sourceTree = "<group>"; };
+		1F269EA92C50117D00F96A6E /* RegisterWelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeRouter.swift; sourceTree = "<group>"; };
+		1F269EAA2C50117D00F96A6E /* RegisterWelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeModels.swift; sourceTree = "<group>"; };
+		1F269EAB2C50117D00F96A6E /* RegisterWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeViewController.swift; sourceTree = "<group>"; };
+		1F269EAC2C50117D00F96A6E /* RegisterWelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeProtocols.swift; sourceTree = "<group>"; };
+		1F269EAD2C50117D00F96A6E /* RegisterWelcomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeAssembly.swift; sourceTree = "<group>"; };
+		1F269EAE2C50117D00F96A6E /* RegisterWelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWelcomeInteractor.swift; sourceTree = "<group>"; };
+		1F269EB82C5011C400F96A6E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		1F269EB92C5011C400F96A6E /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		1F269EBA2C5011C400F96A6E /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		1F269EBB2C5011C400F96A6E /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		1F269EBC2C5011C400F96A6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		1FC827242C565128005E3E28 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		1FED8E0E2C4A54690091AE88 /* termeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = termeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FED8E112C4A54690091AE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FED8E132C4A54690091AE88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FED8E152C4A54690091AE88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FED8E1A2C4A546A0091AE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FED8E1D2C4A546A0091AE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FED8E1F2C4A546A0091AE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,15 +121,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F10461E2C4BC02100C8F56A /* RegisterGroup */ = {
+		1F269E722C50107D00F96A6E /* RegistrationGroups */ = {
 			isa = PBXGroup;
 			children = (
-				1F1046182C4B895700C8F56A /* RegisterViewController.swift */,
-				1F10461F2C4BC08700C8F56A /* RegisterMailViewController.swift */,
-				1F1046212C4BC0A300C8F56A /* RegisterInfoViewController.swift */,
-				1F1046232C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift */,
+				1F269E732C5010A200F96A6E /* RegisterGroup */,
+				1F269E842C5010DF00F96A6E /* RegisterMailGroup */,
+				1F269E952C50111800F96A6E /* RegisterInfo */,
+				1F269EA62C50115B00F96A6E /* RegisterWelcome */,
+			);
+			path = RegistrationGroups;
+			sourceTree = "<group>";
+		};
+		1F269E732C5010A200F96A6E /* RegisterGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1F269E742C5010D900F96A6E /* RegisterPresenter.swift */,
+				1F269E752C5010D900F96A6E /* RegisterWorker.swift */,
+				1F269E762C5010D900F96A6E /* RegisterRouter.swift */,
+				1F269E772C5010D900F96A6E /* RegisterModels.swift */,
+				1F269E782C5010D900F96A6E /* RegisterViewController.swift */,
+				1F269E792C5010D900F96A6E /* RegisterProtocols.swift */,
+				1F269E7A2C5010D900F96A6E /* RegisterAssembly.swift */,
+				1F269E7B2C5010D900F96A6E /* RegisterInteractor.swift */,
 			);
 			path = RegisterGroup;
+			sourceTree = "<group>";
+		};
+		1F269E842C5010DF00F96A6E /* RegisterMailGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1F269E852C50111100F96A6E /* RegisterMailPresenter.swift */,
+				1F269E862C50111100F96A6E /* RegisterMailWorker.swift */,
+				1F269E872C50111100F96A6E /* RegisterMailRouter.swift */,
+				1F269E882C50111100F96A6E /* RegisterMailModels.swift */,
+				1F269E892C50111100F96A6E /* RegisterMailViewController.swift */,
+				1F269E8A2C50111100F96A6E /* RegisterMailProtocols.swift */,
+				1F269E8B2C50111100F96A6E /* RegisterMailAssembly.swift */,
+				1F269E8C2C50111100F96A6E /* RegisterMailInteractor.swift */,
+			);
+			path = RegisterMailGroup;
+			sourceTree = "<group>";
+		};
+		1F269E952C50111800F96A6E /* RegisterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1F269E962C50114A00F96A6E /* RegisterInfoPresenter.swift */,
+				1F269E972C50114A00F96A6E /* RegisterInfoWorker.swift */,
+				1F269E982C50114A00F96A6E /* RegisterInfoRouter.swift */,
+				1F269E992C50114A00F96A6E /* RegisterInfoModels.swift */,
+				1F269E9A2C50114A00F96A6E /* RegisterInfoViewController.swift */,
+				1F269E9B2C50114A00F96A6E /* RegisterInfoProtocols.swift */,
+				1F269E9C2C50114A00F96A6E /* RegisterInfoAssembly.swift */,
+				1F269E9D2C50114A00F96A6E /* RegisterInfoInteractor.swift */,
+			);
+			path = RegisterInfo;
+			sourceTree = "<group>";
+		};
+		1F269EA62C50115B00F96A6E /* RegisterWelcome */ = {
+			isa = PBXGroup;
+			children = (
+				1F269EA72C50117D00F96A6E /* RegisterWelcomePresenter.swift */,
+				1F269EA82C50117D00F96A6E /* RegisterWelcomeWorker.swift */,
+				1F269EA92C50117D00F96A6E /* RegisterWelcomeRouter.swift */,
+				1F269EAA2C50117D00F96A6E /* RegisterWelcomeModels.swift */,
+				1F269EAB2C50117D00F96A6E /* RegisterWelcomeViewController.swift */,
+				1F269EAC2C50117D00F96A6E /* RegisterWelcomeProtocols.swift */,
+				1F269EAD2C50117D00F96A6E /* RegisterWelcomeAssembly.swift */,
+				1F269EAE2C50117D00F96A6E /* RegisterWelcomeInteractor.swift */,
+			);
+			path = RegisterWelcome;
+			sourceTree = "<group>";
+		};
+		1F269EB72C50119C00F96A6E /* LoginGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1F269EB82C5011C400F96A6E /* LoginPresenter.swift */,
+				1F269EB92C5011C400F96A6E /* LoginWorker.swift */,
+				1F269EBA2C5011C400F96A6E /* LoginRouter.swift */,
+				1F269EBB2C5011C400F96A6E /* LoginModels.swift */,
+				1F269EBC2C5011C400F96A6E /* LoginViewController.swift */,
+				1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */,
+				1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */,
+				1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */,
+			);
+			path = LoginGroup;
 			sourceTree = "<group>";
 		};
 		1FED8E052C4A54680091AE88 = {
@@ -118,13 +226,10 @@
 		1FED8E102C4A54690091AE88 /* termeet */ = {
 			isa = PBXGroup;
 			children = (
-				1F75EA662C4CEB3900F9202B /* logoBlack.jpg */,
+				1F269EB72C50119C00F96A6E /* LoginGroup */,
+				1F269E722C50107D00F96A6E /* RegistrationGroups */,
 				1FED8E112C4A54690091AE88 /* AppDelegate.swift */,
 				1FED8E132C4A54690091AE88 /* SceneDelegate.swift */,
-				1FED8E152C4A54690091AE88 /* LoginViewController.swift */,
-				1F10461E2C4BC02100C8F56A /* RegisterGroup */,
-				1F10461A2C4B898800C8F56A /* RecoveryViewController.swift */,
-				1F10461C2C4B8B1200C8F56A /* PersonalAreaViewController.swift */,
 				1FED8E2A2C4A5C0C0091AE88 /* DesignFiles */,
 				1FED8E252C4A59400091AE88 /* UIElements */,
 				1FED8E1A2C4A546A0091AE88 /* Assets.xcassets */,
@@ -147,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				1FED8E2B2C4A5C970091AE88 /* AppColors.swift */,
+				1FC827242C565128005E3E28 /* AppFonts.swift */,
 			);
 			path = DesignFiles;
 			sourceTree = "<group>";
@@ -211,7 +317,6 @@
 			files = (
 				1FED8E1B2C4A546A0091AE88 /* Assets.xcassets in Resources */,
 				1FED8E1E2C4A546A0091AE88 /* Base in Resources */,
-				1F75EA672C4CEB3900F9202B /* logoBlack.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,16 +328,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FED8E292C4A5B960091AE88 /* InsetedTextField.swift in Sources */,
-				1FED8E162C4A54690091AE88 /* LoginViewController.swift in Sources */,
-				1F1046242C4BC0CA00C8F56A /* RegisterWelcomeViewController.swift in Sources */,
-				1F1046192C4B895700C8F56A /* RegisterViewController.swift in Sources */,
-				1F1046222C4BC0A300C8F56A /* RegisterInfoViewController.swift in Sources */,
+				1F269EAF2C50117D00F96A6E /* RegisterWelcomePresenter.swift in Sources */,
+				1FC827252C565129005E3E28 /* AppFonts.swift in Sources */,
+				1F269EB02C50117D00F96A6E /* RegisterWelcomeWorker.swift in Sources */,
+				1F269EB12C50117D00F96A6E /* RegisterWelcomeRouter.swift in Sources */,
+				1F269EB22C50117D00F96A6E /* RegisterWelcomeModels.swift in Sources */,
+				1F269EB32C50117D00F96A6E /* RegisterWelcomeViewController.swift in Sources */,
+				1F269EB42C50117D00F96A6E /* RegisterWelcomeProtocols.swift in Sources */,
+				1F269EB52C50117D00F96A6E /* RegisterWelcomeAssembly.swift in Sources */,
+				1F269EB62C50117D00F96A6E /* RegisterWelcomeInteractor.swift in Sources */,
 				1FED8E122C4A54690091AE88 /* AppDelegate.swift in Sources */,
 				1FED8E2C2C4A5C970091AE88 /* AppColors.swift in Sources */,
-				1F10461B2C4B898800C8F56A /* RecoveryViewController.swift in Sources */,
 				1FED8E142C4A54690091AE88 /* SceneDelegate.swift in Sources */,
-				1F10461D2C4B8B1200C8F56A /* PersonalAreaViewController.swift in Sources */,
-				1F1046202C4BC08700C8F56A /* RegisterMailViewController.swift in Sources */,
+				1F269E7C2C5010D900F96A6E /* RegisterPresenter.swift in Sources */,
+				1F269E7D2C5010D900F96A6E /* RegisterWorker.swift in Sources */,
+				1F269E7E2C5010D900F96A6E /* RegisterRouter.swift in Sources */,
+				1F269E7F2C5010D900F96A6E /* RegisterModels.swift in Sources */,
+				1F269E802C5010D900F96A6E /* RegisterViewController.swift in Sources */,
+				1F269E812C5010D900F96A6E /* RegisterProtocols.swift in Sources */,
+				1F269E822C5010D900F96A6E /* RegisterAssembly.swift in Sources */,
+				1F269E832C5010D900F96A6E /* RegisterInteractor.swift in Sources */,
+				1F269EC02C5011C400F96A6E /* LoginPresenter.swift in Sources */,
+				1F269EC12C5011C400F96A6E /* LoginWorker.swift in Sources */,
+				1F269EC22C5011C400F96A6E /* LoginRouter.swift in Sources */,
+				1F269EC32C5011C400F96A6E /* LoginModels.swift in Sources */,
+				1F269EC42C5011C400F96A6E /* LoginViewController.swift in Sources */,
+				1F269EC52C5011C400F96A6E /* LoginProtocols.swift in Sources */,
+				1F269EC62C5011C400F96A6E /* LoginAssembly.swift in Sources */,
+				1F269EC72C5011C400F96A6E /* LoginInteractor.swift in Sources */,
+				1F269E9E2C50114A00F96A6E /* RegisterInfoPresenter.swift in Sources */,
+				1F269E9F2C50114A00F96A6E /* RegisterInfoWorker.swift in Sources */,
+				1F269EA02C50114A00F96A6E /* RegisterInfoRouter.swift in Sources */,
+				1F269EA12C50114A00F96A6E /* RegisterInfoModels.swift in Sources */,
+				1F269EA22C50114A00F96A6E /* RegisterInfoViewController.swift in Sources */,
+				1F269EA32C50114A00F96A6E /* RegisterInfoProtocols.swift in Sources */,
+				1F269EA42C50114A00F96A6E /* RegisterInfoAssembly.swift in Sources */,
+				1F269EA52C50114A00F96A6E /* RegisterInfoInteractor.swift in Sources */,
+				1F269E8D2C50111100F96A6E /* RegisterMailPresenter.swift in Sources */,
+				1F269E8E2C50111100F96A6E /* RegisterMailWorker.swift in Sources */,
+				1F269E8F2C50111100F96A6E /* RegisterMailRouter.swift in Sources */,
+				1F269E902C50111100F96A6E /* RegisterMailModels.swift in Sources */,
+				1F269E912C50111100F96A6E /* RegisterMailViewController.swift in Sources */,
+				1F269E922C50111100F96A6E /* RegisterMailProtocols.swift in Sources */,
+				1F269E932C50111100F96A6E /* RegisterMailAssembly.swift in Sources */,
+				1F269E942C50111100F96A6E /* RegisterMailInteractor.swift in Sources */,
 				1FED8E272C4A59E60091AE88 /* ValidatableTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
