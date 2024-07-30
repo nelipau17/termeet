@@ -47,6 +47,12 @@
 		1F269EC52C5011C400F96A6E /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */; };
 		1F269EC62C5011C400F96A6E /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */; };
 		1F269EC72C5011C400F96A6E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */; };
+		1F98565C2C5793AD00E39ADE /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565B2C5793AD00E39ADE /* EndPointType.swift */; };
+		1F98565E2C57948400E39ADE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565D2C57948400E39ADE /* HTTPMethod.swift */; };
+		1F9856602C57950A00E39ADE /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565F2C57950A00E39ADE /* HTTPTask.swift */; };
+		1F9856622C57971600E39ADE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9856612C57971600E39ADE /* ParameterEncoding.swift */; };
+		1F9856642C57994E00E39ADE /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9856632C57994E00E39ADE /* ParameterEncoder.swift */; };
+		1F9856662C579E4900E39ADE /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9856652C579E4900E39ADE /* URLParameterEncoder.swift */; };
 		1FC827252C565129005E3E28 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC827242C565128005E3E28 /* AppFonts.swift */; };
 		1FED8E122C4A54690091AE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E112C4A54690091AE88 /* AppDelegate.swift */; };
 		1FED8E142C4A54690091AE88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8E132C4A54690091AE88 /* SceneDelegate.swift */; };
@@ -98,6 +104,12 @@
 		1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		1F98565B2C5793AD00E39ADE /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		1F98565D2C57948400E39ADE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1F98565F2C57950A00E39ADE /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		1F9856612C57971600E39ADE /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		1F9856632C57994E00E39ADE /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		1F9856652C579E4900E39ADE /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		1FC827242C565128005E3E28 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		1FED8E0E2C4A54690091AE88 /* termeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = termeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FED8E112C4A54690091AE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +219,51 @@
 			path = LoginGroup;
 			sourceTree = "<group>";
 		};
+		1F9856542C5790B900E39ADE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F9856572C57935200E39ADE /* EndPoint */,
+				1F98565A2C57938500E39ADE /* Manager */,
+				1F9856592C57937B00E39ADE /* Service */,
+				1F9856582C57936900E39ADE /* Encoding */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1F9856572C57935200E39ADE /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		1F9856582C57936900E39ADE /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				1F9856612C57971600E39ADE /* ParameterEncoding.swift */,
+				1F9856632C57994E00E39ADE /* ParameterEncoder.swift */,
+				1F9856652C579E4900E39ADE /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		1F9856592C57937B00E39ADE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1F98565B2C5793AD00E39ADE /* EndPointType.swift */,
+				1F98565D2C57948400E39ADE /* HTTPMethod.swift */,
+				1F98565F2C57950A00E39ADE /* HTTPTask.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1F98565A2C57938500E39ADE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		1FED8E052C4A54680091AE88 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +283,7 @@
 		1FED8E102C4A54690091AE88 /* termeet */ = {
 			isa = PBXGroup;
 			children = (
+				1F9856542C5790B900E39ADE /* Network */,
 				1F269EB72C50119C00F96A6E /* LoginGroup */,
 				1F269E722C50107D00F96A6E /* RegistrationGroups */,
 				1FED8E112C4A54690091AE88 /* AppDelegate.swift */,
@@ -327,12 +385,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F98565C2C5793AD00E39ADE /* EndPointType.swift in Sources */,
 				1FED8E292C4A5B960091AE88 /* InsetedTextField.swift in Sources */,
 				1F269EAF2C50117D00F96A6E /* RegisterWelcomePresenter.swift in Sources */,
+				1F9856642C57994E00E39ADE /* ParameterEncoder.swift in Sources */,
 				1FC827252C565129005E3E28 /* AppFonts.swift in Sources */,
 				1F269EB02C50117D00F96A6E /* RegisterWelcomeWorker.swift in Sources */,
 				1F269EB12C50117D00F96A6E /* RegisterWelcomeRouter.swift in Sources */,
 				1F269EB22C50117D00F96A6E /* RegisterWelcomeModels.swift in Sources */,
+				1F9856662C579E4900E39ADE /* URLParameterEncoder.swift in Sources */,
 				1F269EB32C50117D00F96A6E /* RegisterWelcomeViewController.swift in Sources */,
 				1F269EB42C50117D00F96A6E /* RegisterWelcomeProtocols.swift in Sources */,
 				1F269EB52C50117D00F96A6E /* RegisterWelcomeAssembly.swift in Sources */,
@@ -347,6 +408,7 @@
 				1F269E802C5010D900F96A6E /* RegisterViewController.swift in Sources */,
 				1F269E812C5010D900F96A6E /* RegisterProtocols.swift in Sources */,
 				1F269E822C5010D900F96A6E /* RegisterAssembly.swift in Sources */,
+				1F9856602C57950A00E39ADE /* HTTPTask.swift in Sources */,
 				1F269E832C5010D900F96A6E /* RegisterInteractor.swift in Sources */,
 				1F269EC02C5011C400F96A6E /* LoginPresenter.swift in Sources */,
 				1F269EC12C5011C400F96A6E /* LoginWorker.swift in Sources */,
@@ -367,9 +429,11 @@
 				1F269E8D2C50111100F96A6E /* RegisterMailPresenter.swift in Sources */,
 				1F269E8E2C50111100F96A6E /* RegisterMailWorker.swift in Sources */,
 				1F269E8F2C50111100F96A6E /* RegisterMailRouter.swift in Sources */,
+				1F9856622C57971600E39ADE /* ParameterEncoding.swift in Sources */,
 				1F269E902C50111100F96A6E /* RegisterMailModels.swift in Sources */,
 				1F269E912C50111100F96A6E /* RegisterMailViewController.swift in Sources */,
 				1F269E922C50111100F96A6E /* RegisterMailProtocols.swift in Sources */,
+				1F98565E2C57948400E39ADE /* HTTPMethod.swift in Sources */,
 				1F269E932C50111100F96A6E /* RegisterMailAssembly.swift in Sources */,
 				1F269E942C50111100F96A6E /* RegisterMailInteractor.swift in Sources */,
 				1FED8E272C4A59E60091AE88 /* ValidatableTextField.swift in Sources */,
