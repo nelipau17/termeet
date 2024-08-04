@@ -47,6 +47,7 @@
 		1F269EC52C5011C400F96A6E /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */; };
 		1F269EC62C5011C400F96A6E /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */; };
 		1F269EC72C5011C400F96A6E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */; };
+		1F4F785E2C5DF8DC006859B3 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F785D2C5DF8DB006859B3 /* JSONParameterEncoder.swift */; };
 		1F98565C2C5793AD00E39ADE /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565B2C5793AD00E39ADE /* EndPointType.swift */; };
 		1F98565E2C57948400E39ADE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565D2C57948400E39ADE /* HTTPMethod.swift */; };
 		1F9856602C57950A00E39ADE /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98565F2C57950A00E39ADE /* HTTPTask.swift */; };
@@ -104,6 +105,7 @@
 		1F269EBD2C5011C400F96A6E /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		1F269EBE2C5011C400F96A6E /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		1F269EBF2C5011C400F96A6E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		1F4F785D2C5DF8DB006859B3 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		1F98565B2C5793AD00E39ADE /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		1F98565D2C57948400E39ADE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1F98565F2C57950A00E39ADE /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				1F9856612C57971600E39ADE /* ParameterEncoding.swift */,
 				1F9856632C57994E00E39ADE /* ParameterEncoder.swift */,
 				1F9856652C579E4900E39ADE /* URLParameterEncoder.swift */,
+				1F4F785D2C5DF8DB006859B3 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F98565C2C5793AD00E39ADE /* EndPointType.swift in Sources */,
+				1F4F785E2C5DF8DC006859B3 /* JSONParameterEncoder.swift in Sources */,
 				1FED8E292C4A5B960091AE88 /* InsetedTextField.swift in Sources */,
 				1F269EAF2C50117D00F96A6E /* RegisterWelcomePresenter.swift in Sources */,
 				1F9856642C57994E00E39ADE /* ParameterEncoder.swift in Sources */,
